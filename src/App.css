@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #FBF3D5;
+}
+
+.canvas-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* behind buttons */
+}
+
+
+canvas {
+  display: block;
+  background-size: cover;
+}
+
+
+/* Button container at bottom */
+.button-group {
+  display: fixed;
+  bottom: 0.5%;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  background-color: #f97316;
+  /* Tailwind's bg-orange-500 */
+  color: white;
+  /* font-size: 18px; text-2xl */
+  font-weight: 600;
+  /* font-semibold */
+  border-radius: 1rem;
+  /* rounded-xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* shadow-lg */
+  padding: 0.75rem 1.5rem;
+  /* py-3 px-6 */
+  margin-top: 0.5rem;
+  /* mt-2 */
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+p:hover {
+  background-color: #ea580c;
+  /* Tailwind's bg-orange-600 */
+}
+
+a {
+  text-decoration: none;
+  background-color: white;
+  margin-top: 1%;
+}
+
+/* Base button style */
+/* Only style homepage buttons */
+.homepage-buttons button,
+.homepage-buttons a {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease;
+}
+
+
+/* New session button */
+button.new-session {
+  background-color: #FB923C;
+  /* orange */
+  color: white;
+}
+
+button.new-session:hover {
+  background-color: #ea580c;
+  /* darker orange */
+}
+
+/* Stop speech button */
+button.stop-speech {
+  background-color: #DC2626;
+  /* red */
+  color: white;
+}
+
+button.stop-speech:hover {
+  background-color: #b91c1c;
+}
+
+/* Floating button */
+.guidance-button {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  /* blue */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.guidance-button:hover {
+  background-color: #1d4ed8;
+  /* darker blue */
+}
+
+/* Guidance panel */
+.guidance-panel {
+  position: fixed;
+  bottom: 80px;
+  right: 16px;
+  width: 300px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.guidance-panel h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #ea580c;
+  /* orange */
+}
+
+.guidance-panel ul {
+  padding-left: 20px;
+  margin: 12px 0;
+  line-height: 1.6;
+  /* extra spacing between lines */
+}
+
+.guidance-panel li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #374151;
+  /* gray-700 */
+}
+
+
+/* Close button inside panel */
+.close-button {
+  width: 100%;
+  padding: 8px;
+  background-color: #ef4444;
+  /* red */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #dc2626;
+  /* darker red */
+}
